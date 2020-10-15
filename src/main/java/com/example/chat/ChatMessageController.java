@@ -9,7 +9,7 @@ public class ChatMessageController {
     @MessageMapping("/chat")
     @SendTo("/topic/messages")
     public ChatMessage get(ChatMessage chatMessage) {
-        return new ChatMessage(chatMessage.getValue());
+        return chatMessage;
     }
 
 }
